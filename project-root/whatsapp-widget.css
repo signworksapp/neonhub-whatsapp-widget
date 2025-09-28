@@ -1,0 +1,343 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /* NeonHub WhatsApp Widget - Shopify Ready CSS */\
+/* Import this file in your theme.liquid file or add to your main CSS */\
+\
+/* Floating Button */\
+.neonhub-whatsapp-float \{\
+  position: fixed;\
+  bottom: 20px;\
+  right: 20px;\
+  z-index: 99999;\
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\
+\}\
+\
+.neonhub-whatsapp-float button \{\
+  display: flex;\
+  align-items: center;\
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);\
+  color: #fff;\
+  font-weight: 600;\
+  font-size: 14px;\
+  padding: 12px 16px;\
+  border-radius: 50px;\
+  border: none;\
+  cursor: pointer;\
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);\
+  transition: all 0.3s ease;\
+  text-decoration: none;\
+\}\
+\
+.neonhub-whatsapp-float button:hover \{\
+  background: linear-gradient(135deg, #1ebe5d 0%, #0f7a6f 100%);\
+  transform: translateY(-2px);\
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);\
+  text-decoration: none;\
+  color: #fff;\
+\}\
+\
+.neonhub-whatsapp-float button img,\
+.neonhub-whatsapp-float button svg \{\
+  width: 24px;\
+  height: 24px;\
+  margin-right: 12px;\
+\}\
+\
+/* Mobile responsive */\
+@media (max-width: 768px) \{\
+  .neonhub-whatsapp-float \{\
+    bottom: 15px;\
+    right: 15px;\
+  \}\
+  \
+  .neonhub-whatsapp-float button \{\
+    width: 60px;\
+    height: 60px;\
+    border-radius: 50%;\
+    justify-content: center;\
+    font-size: 0;\
+    padding: 0;\
+  \}\
+  \
+  .neonhub-whatsapp-float button span \{\
+    display: none;\
+  \}\
+  \
+  .neonhub-whatsapp-float button img,\
+  .neonhub-whatsapp-float button svg \{\
+    margin: 0;\
+    width: 32px;\
+    height: 32px;\
+  \}\
+\}\
+\
+/* Popup Styles */\
+.neonhub-whatsapp-popup \{\
+  display: none;\
+  position: fixed;\
+  bottom: 90px;\
+  right: 20px;\
+  border-radius: 16px;\
+  width: 320px;\
+  max-height: 80vh;\
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);\
+  z-index: 99999;\
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\
+  overflow: hidden;\
+  background: linear-gradient(135deg, #075E54 0%, #128C7E 100%);\
+\}\
+\
+@media (max-width: 768px) \{\
+  .neonhub-whatsapp-popup \{\
+    width: calc(100% - 40px);\
+    left: 20px;\
+    right: 20px;\
+    bottom: 20px;\
+  \}\
+\}\
+\
+.neonhub-whatsapp-header \{\
+  background: #075E54;\
+  color: #fff;\
+  padding: 12px 16px;\
+  display: flex;\
+  justify-content: space-between;\
+  align-items: center;\
+  border-bottom: 1px solid rgba(255,255,255,0.1);\
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);\
+\}\
+\
+.neonhub-agent-info \{\
+  display: flex;\
+  align-items: center;\
+  gap: 12px;\
+\}\
+\
+.neonhub-agent-avatar \{\
+  width: 40px;\
+  height: 40px;\
+  border-radius: 50%;\
+  background: #ddd;\
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" fill="%23ddd"/><path d="M20 8c3.31 0 6 2.69 6 6 0 3.31-2.69 6-6 6s-6-2.69-6-6c0-3.31 2.69-6 6-6zm0 16c5.33 0 10 2.67 10 8v2H10v-2c0-5.33 4.67-8 10-8z" fill="%23999"/></svg>');\
+  background-size: cover;\
+  border: 2px solid #fff;\
+  position: relative;\
+\}\
+\
+.neonhub-agent-avatar::after \{\
+  content: '';\
+  position: absolute;\
+  bottom: 2px;\
+  right: 2px;\
+  width: 12px;\
+  height: 12px;\
+  background: #4CAF50;\
+  border: 2px solid #fff;\
+  border-radius: 50%;\
+\}\
+\
+.neonhub-agent-details h4 \{\
+  font-size: 16px;\
+  font-weight: 500;\
+  margin: 0;\
+  line-height: 1.2;\
+\}\
+\
+.neonhub-agent-details p \{\
+  font-size: 13px;\
+  opacity: 0.8;\
+  margin: 2px 0 0 0;\
+  line-height: 1;\
+\}\
+\
+.neonhub-whatsapp-close \{\
+  cursor: pointer;\
+  font-size: 24px;\
+  line-height: 1;\
+  padding: 8px;\
+  background: none;\
+  border: none;\
+  color: #fff;\
+  transition: opacity 0.2s;\
+\}\
+\
+.neonhub-whatsapp-close:hover \{\
+  opacity: 0.7;\
+\}\
+\
+.neonhub-whatsapp-body \{\
+  padding: 20px;\
+  background-image: url('https://cdn.shopify.com/s/files/1/0466/1352/8731/files/https___dev-to-uploads.s3.amazonaws.com_uploads_articles_b9qk3w41sqf1l0ccujfh.webp?v=1758740203');\
+  background-size: cover;\
+  background-position: center;\
+  background-repeat: no-repeat;\
+\}\
+\
+.neonhub-chat-bubble \{\
+  background: #fff;\
+  border-radius: 7.5px 7.5px 7.5px 0;\
+  padding: 6px 7px 8px 9px;\
+  margin-bottom: 8px;\
+  max-width: 85%;\
+  font-size: 14px;\
+  line-height: 1.4;\
+  box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);\
+  position: relative;\
+  color: #303030;\
+  word-wrap: break-word;\
+\}\
+\
+.neonhub-chat-bubble::before \{\
+  content: '';\
+  position: absolute;\
+  bottom: 0;\
+  left: -8px;\
+  width: 8px;\
+  height: 13px;\
+  background: radial-gradient(circle at 0 0, transparent 13px, #fff 13px);\
+\}\
+\
+.neonhub-chat-bubble-timestamp \{\
+  font-size: 11px;\
+  color: #667781;\
+  margin-top: 2px;\
+  display: block;\
+\}\
+\
+/* Typing indicator */\
+.neonhub-typing \{\
+  display: none;\
+  margin-bottom: 8px;\
+  padding: 6px 7px 8px 9px;\
+  background: #fff;\
+  border-radius: 7.5px 7.5px 7.5px 0;\
+  max-width: 85%;\
+  position: relative;\
+  box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);\
+\}\
+\
+.neonhub-typing::before \{\
+  content: '';\
+  position: absolute;\
+  bottom: 0;\
+  left: -8px;\
+  width: 8px;\
+  height: 13px;\
+  background: radial-gradient(circle at 0 0, transparent 13px, #fff 13px);\
+\}\
+\
+.neonhub-typing span \{\
+  display: inline-block;\
+  width: 6px;\
+  height: 6px;\
+  margin: 0 1px;\
+  background: #90949C;\
+  border-radius: 50%;\
+  animation: neonhub-typingBounce 1.5s infinite ease-in-out;\
+\}\
+\
+.neonhub-typing span:nth-child(1) \{ animation-delay: 0s; \}\
+.neonhub-typing span:nth-child(2) \{ animation-delay: 0.15s; \}\
+.neonhub-typing span:nth-child(3) \{ animation-delay: 0.4s; \}\
+\
+@keyframes neonhub-typingBounce \{\
+  0%, 60%, 100% \{ transform: translateY(0); opacity: 0.4; \}\
+  30% \{ transform: translateY(-8px); opacity: 1; \}\
+\}\
+\
+.neonhub-form-container \{\
+  margin-top: 16px;\
+\}\
+\
+.neonhub-input-bubble \{\
+  background: #fff;\
+  border-radius: 25px;\
+  padding: 4px;\
+  margin-bottom: 12px;\
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);\
+\}\
+\
+.neonhub-input-bubble input \{\
+  border: none;\
+  outline: none;\
+  width: 100%;\
+  font-size: 14px;\
+  background: transparent;\
+  padding: 12px 16px;\
+  font-family: inherit;\
+  color: #333;\
+\}\
+\
+.neonhub-input-bubble input::placeholder \{\
+  color: #999;\
+\}\
+\
+.neonhub-submit-btn \{\
+  width: 100%;\
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);\
+  color: #fff;\
+  border: none;\
+  padding: 14px 20px;\
+  border-radius: 25px;\
+  font-weight: 600;\
+  cursor: pointer;\
+  font-size: 14px;\
+  font-family: inherit;\
+  transition: all 0.3s ease;\
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);\
+\}\
+\
+.neonhub-submit-btn:hover \{\
+  background: linear-gradient(135deg, #1ebe5d 0%, #0f7a6f 100%);\
+  transform: translateY(-1px);\
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);\
+\}\
+\
+.neonhub-submit-btn:disabled \{\
+  opacity: 0.6;\
+  cursor: not-allowed;\
+  transform: none;\
+\}\
+\
+/* Toast notification */\
+.neonhub-toast \{\
+  display: none;\
+  position: fixed;\
+  bottom: 120px;\
+  right: 20px;\
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);\
+  color: white;\
+  padding: 12px 20px;\
+  border-radius: 25px;\
+  font-size: 14px;\
+  font-weight: 500;\
+  z-index: 100000;\
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);\
+  animation: neonhub-slideIn 0.3s ease;\
+\}\
+\
+@keyframes neonhub-slideIn \{\
+  from \{ transform: translateX(100%); opacity: 0; \}\
+  to \{ transform: translateX(0); opacity: 1; \}\
+\}\
+\
+.neonhub-loading \{\
+  display: inline-block;\
+  width: 16px;\
+  height: 16px;\
+  border: 2px solid rgba(255,255,255,0.3);\
+  border-radius: 50%;\
+  border-top-color: #fff;\
+  animation: neonhub-spin 1s ease-in-out infinite;\
+  margin-right: 8px;\
+\}\
+\
+@keyframes neonhub-spin \{\
+  to \{ transform: rotate(360deg); \}\
+\}\
+}
